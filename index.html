@@ -7,186 +7,156 @@
 <meta property="og:description" content="Talks on evaluating, governing and trusting Agentic AI. Speaker at Secure AI Summit UAE 2026.">
 <meta property="og:type" content="website">
 <title>Pranjal Mendhekar, Speaker</title>
-<meta name="description" content="Pranjal Mendhekar — AI validation and risk governance leader. Talks on evaluating, governing and trusting Agentic AI.">
+<meta name="description" content="Pranjal Mendhekar, AI validation and risk governance leader. Talks on evaluating, governing and trusting Agentic AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,750&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 body{margin:0}img{max-width:100%}[hidden]{display:none!important}
-/* Layout: a validation log. Asymmetric hero with an evaluation trace, then talks as dated log entries filterable by track. */
+/* Layout: a quiet two-column page. A narrow label column on the left, content on the right; hairlines instead of boxes; one green accent. */
 :root{
-  --paper:#F3F5F8; --surface:#FFFFFF; --ink:#0E1A2B; --muted:#566275; --line:#D5DBE3;
-  --accent:#C8410B; --accent-ink:#FFFFFF; --accent-soft:#FBE7DC; --ok:#13795B;
-  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --f-body:"IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --wrap:1120px;
+  --paper:#FAFAF8; --surface:#FFFFFF; --ink:#1C1D1B; --muted:#686964; --line:#E5E4DF;
+  --accent:#2E6A4E; --accent-ink:#FFFFFF; --accent-soft:#EBF2ED;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --wrap:1040px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0A111D; --surface:#101A2B; --ink:#E7ECF2; --muted:#94A1B4; --line:#24324A;
-  --accent:#FF7A3D; --accent-ink:#1A0B03; --accent-soft:#2E1A10; --ok:#4FC79B; color-scheme:dark}}
+  --paper:#141513; --surface:#1B1C1A; --ink:#ECEBE6; --muted:#A2A29B; --line:#2D2E2B;
+  --accent:#7DC29D; --accent-ink:#0E1A13; --accent-soft:#1E2922; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#0A111D; --surface:#101A2B; --ink:#E7ECF2; --muted:#94A1B4; --line:#24324A;
-  --accent:#FF7A3D; --accent-ink:#1A0B03; --accent-soft:#2E1A10; --ok:#4FC79B; color-scheme:dark}
+  --paper:#141513; --surface:#1B1C1A; --ink:#ECEBE6; --muted:#A2A29B; --line:#2D2E2B;
+  --accent:#7DC29D; --accent-ink:#0E1A13; --accent-soft:#1E2922; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.04em}
-.label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-h1,h2,h3{font-family:var(--f-display);line-height:1.08;text-wrap:balance;margin:0}
-h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;letter-spacing:-.01em}
 p{margin:0}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.1;text-wrap:balance}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
 
-/* top bar */
-.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:color-mix(in srgb, var(--paper) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+/* header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:21;background:var(--paper)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.brand{font-family:var(--f-display);font-weight:700;font-size:1.05rem;text-decoration:none}
-.brand span{color:var(--accent)}
-.nav{display:flex;gap:20px;align-items:center}
-.nav a{text-decoration:none;font-size:.92rem;color:var(--muted)}
+.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:color-mix(in srgb, var(--paper) 90%, transparent);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{font-family:var(--f-display);font-weight:750;font-size:1.05rem;text-decoration:none;letter-spacing:-.01em}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:.93rem;color:var(--muted)}
 .nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 .92rem/1 var(--f-body);padding:12px 18px;border-radius:999px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .92rem/1 var(--f-body);padding:12px 20px;border-radius:999px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer;transition:border-color .15s ease, background .15s ease}
+.btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn:hover{transform:translateY(-1px)}
-.btn.sm{padding:9px 14px;font-size:.85rem}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.sm{padding:9px 15px;font-size:.86rem}
 @media (max-width:720px){.nav a:not(.btn){display:none}}
 
 /* hero */
-.hero .wrap{display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:center;padding-block:64px 48px}
-.hero-copy{min-width:0;display:flex;flex-direction:column;gap:22px}
-.hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);font-weight:800;letter-spacing:-.025em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.role{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
-.role b{color:var(--ink);font-weight:500}
-.lede{font-size:1.15rem;max-width:58ch;color:var(--ink)}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.portrait{position:relative;justify-self:end;width:100%;max-width:360px}
-.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid var(--surface);box-shadow:0 0 0 1.5px var(--line)}
-.badge{position:absolute;left:-12px;bottom:18px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;flex-direction:column;gap:2px;max-width:220px}
-.badge .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px}
-.badge b{font-size:.9rem}
-
-/* evaluation trace */
-.trace{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.trace .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding-block:18px}
-.steps{display:flex;align-items:center;gap:0;min-width:0;overflow-x:auto}
-.step{display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--f-mono);font-size:.8rem}
-.step i{width:10px;height:10px;border-radius:50%;border:2px solid var(--accent);display:inline-block}
-.step.done i{background:var(--accent)}
-.rail{flex:1;min-width:28px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 10px);margin:0 12px}
-@media (max-width:820px){.trace .wrap{grid-template-columns:1fr;gap:10px}}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:64px;align-items:center;padding-block:72px 80px}
+.hero-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);font-weight:750;letter-spacing:-.03em}
+.hero h1 span{color:var(--accent)}
+.role{font-size:1rem;color:var(--muted)}
+.role b{color:var(--ink);font-weight:600}
+.lede{font-size:1.12rem;max-width:54ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.next{font-size:.92rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.next i{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.portrait{margin:0;width:100%;max-width:300px;justify-self:end}
+.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%}
 
 /* sections */
-section.block .wrap{padding-block:72px;display:flex;flex-direction:column;gap:32px}
-.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.head p{color:var(--muted);max-width:52ch}
+.sec{border-top:1px solid var(--line)}
+.sec > .wrap{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding-block:72px}
+.sec-label{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.sec-body{display:flex;flex-direction:column;gap:28px;min-width:0}
+.sec h2{font-size:clamp(1.6rem,3vw,2.15rem);font-weight:750;letter-spacing:-.02em}
+.intro{color:var(--muted);max-width:60ch}
 
-/* upcoming */
-.upcoming{background:var(--ink);color:var(--paper)}
-.upcoming .label{color:color-mix(in srgb, var(--paper) 65%, transparent)}
-.up-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
-.up-grid > *{min-width:0}
-.up-event h3{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800}
-.up-meta{display:flex;flex-direction:column;gap:6px;margin-top:16px;font-family:var(--f-mono);font-size:.85rem;opacity:.85}
-.sessions{display:flex;flex-direction:column;gap:14px}
-.session{border:1px solid color-mix(in srgb, var(--paper) 22%, transparent);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:8px}
-.session .kind{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.session h4{margin:0;font:700 1.2rem/1.25 var(--f-display)}
-.session ul{margin:4px 0 0;padding-left:18px;font-size:.93rem;opacity:.85;display:grid;gap:2px}
-.upcoming a.link{color:var(--paper);font-size:.9rem}
+/* next on stage */
+.event{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;background:var(--accent-soft);border-radius:18px;padding:32px}
+.event h3{font-size:1.5rem;font-weight:750;letter-spacing:-.01em}
+.event .meta{margin-top:10px;display:flex;flex-direction:column;gap:2px;font-size:.95rem;color:var(--muted)}
+.event .meta a{color:var(--accent);text-decoration:none;font-weight:600;margin-top:10px}
+.sessions{display:flex;flex-direction:column;gap:18px}
+.session .kind{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.session p{font-weight:600;font-size:1.05rem;margin-top:2px}
+.session p.tba{font-weight:400;color:var(--muted)}
 
-/* tracks */
-.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.track{background:var(--surface);padding:28px;display:flex;flex-direction:column;gap:10px}
-.track .code{font-family:var(--f-mono);font-size:.75rem;color:var(--accent);letter-spacing:.1em}
-.track h3{font-size:1.35rem;font-weight:700}
-.track p{color:var(--muted);font-size:.96rem}
-.track .count{margin-top:auto;padding-top:8px;font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
-.track.flag{background:var(--accent-soft)}
+/* proof strip */
+.proof{border-top:1px solid var(--line)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:28px}
+.proof div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.proof b{font-family:var(--f-display);font-weight:750;font-size:1.9rem;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.proof span{font-size:.88rem;color:var(--muted)}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}}
 
-/* archive */
-.filters{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font:500 .82rem/1 var(--f-mono);padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.log{border-top:1.5px solid var(--ink)}
-.entry{display:grid;grid-template-columns:120px minmax(0,1fr) 190px 120px;gap:24px;padding-block:24px;border-bottom:1px solid var(--line);align-items:start}
-.entry time{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:4px}
-.entry h3{font-size:1.2rem;font-weight:700;line-height:1.25}
-.entry .sum{color:var(--muted);font-size:.95rem;margin-top:6px;max-width:62ch}
-.entry .meta{display:flex;flex-direction:column;gap:6px;font-size:.88rem;padding-top:3px}
-.tag{align-self:flex-start;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
-.tag.panel{border-color:var(--accent);color:var(--accent)}
-.watch{justify-self:end;font:600 .85rem/1 var(--f-body);padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);color:var(--muted);text-decoration:none;white-space:nowrap}
-a.watch{border-color:var(--ink);color:var(--ink)}
-@media (max-width:860px){
-  .entry{grid-template-columns:1fr;gap:10px}
-  .entry .meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 14px}
-  .watch{justify-self:start}
-}
+/* why different */
+.diff{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.diff li{display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:2px solid var(--accent)}
+.diff h3{font-size:1.15rem;font-weight:750;letter-spacing:-.01em}
+.diff p{color:var(--muted);font-size:.96rem}
+@media (max-width:880px){.diff{grid-template-columns:1fr;gap:24px}}
 
-/* key points */
-.kp{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:.9rem}
-.kp li{display:grid;grid-template-columns:14px 1fr;gap:8px}
-.kp li::before{content:"";width:6px;height:6px;margin-top:.55em;border-radius:50%;background:var(--accent)}
+/* cta band */
+.band{background:var(--accent);color:var(--accent-ink)}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-block:44px}
+.band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:750;letter-spacing:-.02em;max-width:28ch}
+.band p{opacity:.85;margin-top:6px;max-width:52ch}
+.band .btn{background:var(--accent-ink);color:var(--accent);border-color:var(--accent-ink)}
+.band .btn:hover{filter:brightness(1.1)}
 
-/* spotlight */
-.spot{display:grid;grid-template-columns:.9fr 1.1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.spot > *{background:var(--surface);padding:32px;min-width:0}
-.stat{font-family:var(--f-display);font-weight:800;font-size:clamp(3.4rem,8vw,5.6rem);line-height:1;color:var(--accent);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.stat-cap{margin-top:12px;color:var(--muted);max-width:36ch}
-.parts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.parts li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
-.parts li:last-child{border-bottom:0}
-.parts .n{font-family:var(--f-mono);font-size:.8rem;color:var(--accent);padding-top:3px}
-.parts b{display:block;font-family:var(--f-display);font-size:1.08rem}
-.parts span.d{color:var(--muted);font-size:.92rem}
-.principles{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;background:var(--accent-soft)!important}
-.principles p{font-family:var(--f-display);font-weight:600;font-size:1.08rem;line-height:1.35}
-@media (max-width:860px){.spot{grid-template-columns:1fr}.principles{grid-template-columns:1fr;gap:14px}.spot > *{padding:24px}}
+/* topics */
+.topics{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.topics h3{font-family:var(--f-body);font-size:1.02rem;font-weight:600;line-height:1.35}
+.topics p{color:var(--muted);font-size:.95rem;margin-top:4px}
 
-/* alongside */
-.peers{display:flex;flex-wrap:wrap;gap:10px 28px;font-family:var(--f-display);font-weight:700;font-size:clamp(1.15rem,2.2vw,1.5rem);color:var(--muted)}
-.peers span{white-space:nowrap}
+/* talks */
+.talks{border-top:1px solid var(--line)}
+.talk{border-bottom:1px solid var(--line)}
+.talk summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding-block:18px}
+.talk summary::-webkit-details-marker{display:none}
+.talk time{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.talk .t{font-weight:600;line-height:1.4}
+.talk .h{display:block;font-weight:400;font-size:.88rem;color:var(--muted);margin-top:2px}
+.talk .plus{font-family:var(--f-mono);color:var(--muted);font-size:1.1rem;transition:transform .2s ease}
+.talk[open] .plus{transform:rotate(45deg)}
+.talk summary:hover .t{color:var(--accent)}
+.talk .more{padding:0 0 22px 130px;display:flex;flex-direction:column;gap:10px;max-width:780px}
+.talk .more p{color:var(--muted)}
+.talk .more ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:.95rem}
+.talk .more a{color:var(--accent);font-weight:600;text-decoration:none}
 
 /* about */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-.about > *{min-width:0}
-.about .bio{display:flex;flex-direction:column;gap:16px;font-size:1.05rem;max-width:64ch}
-.facts{display:grid;gap:0;border-top:1px solid var(--line)}
-.fact{display:grid;grid-template-columns:120px 1fr;gap:16px;padding-block:12px;border-bottom:1px solid var(--line);font-size:.95rem}
-.fact dt{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.fact dd{margin:0}
+.bio{display:flex;flex-direction:column;gap:14px;max-width:62ch}
+.facts{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.facts dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:4px 0 0;font-size:.95rem}
 
-/* invite */
-.invite{background:var(--surface);border-top:1px solid var(--line)}
-.formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.format{border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px;background:var(--paper)}
-.format h3{font-size:1.1rem;font-weight:700}
-.format p{color:var(--muted);font-size:.92rem}
-.format .len{font-family:var(--f-mono);font-size:.75rem;color:var(--accent)}
-.contact{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1.5px solid var(--ink);border-radius:18px;padding:26px 28px}
-.contact h3{font-size:1.5rem;font-weight:800}
-.contact .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.addr{font-family:var(--f-mono);font-size:.9rem;padding:10px 14px;border-radius:10px;background:var(--paper);border:1px dashed var(--line);user-select:all}
-footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+/* contact */
+.formats{display:flex;flex-wrap:wrap;gap:8px}
+.formats span{font-size:.88rem;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.addr{font-family:var(--f-mono);font-size:.95rem;padding:10px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--line);user-select:all}
+footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
 
-@media (max-width:900px){
-  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-block:40px 32px}
-  .portrait{justify-self:start;max-width:260px;order:-1}
-  .up-grid,.about{grid-template-columns:1fr;gap:28px}
-  .formats{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:880px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-block:40px 56px}
+  .portrait{order:-1;justify-self:start;max-width:150px}
+  .sec > .wrap{grid-template-columns:1fr;gap:20px;padding-block:52px}
+  .event{grid-template-columns:1fr;gap:24px}
+  .event{padding:24px}
 }
-@media (max-width:560px){
-  .tracks,.formats{grid-template-columns:1fr}
-  .fact{grid-template-columns:1fr;gap:2px}
-  .badge{left:auto;right:-8px}
+@media (max-width:600px){
+  .topics,.facts,.diff{grid-template-columns:1fr}
+  .talk summary{grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+  .talk time{grid-column:1/-1}
+  .talk .more{padding-left:0}
 }
-@media (prefers-reduced-motion: reduce){*{transition:none!important}.btn:hover{transform:none}}
-.btn,.chip{transition:transform .15s ease, background .15s ease}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -194,13 +164,12 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Pranjal Mendhekar<span>.</span></a>
+    <a class="brand" href="#top">Pranjal Mendhekar</a>
     <nav class="nav" aria-label="Sections">
       <a href="#talks">Talks</a>
       <a href="#topics">Topics</a>
-      <a href="#signature">Signature talk</a>
       <a href="#about">About</a>
-      <a class="btn sm primary" href="#invite">Invite me to speak</a>
+      <a class="btn sm primary" href="#contact">Invite me to speak</a>
     </nav>
   </div>
 </header>
@@ -210,195 +179,130 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
     <div class="wrap">
       <div class="hero-copy">
         <span class="label">Speaker · AI risk &amp; validation · UAE</span>
-        <h1>How do you trust AI that <em>acts on its own?</em></h1>
-        <div class="role"><b>AI Validation &amp; Risk Governance Leader</b><span>at a leading financial institution</span><span>· formerly VP, GenAI/ML Risk at BNY</span></div>
-        <p class="lede">I help organizations evaluate, govern and trust Agentic AI: the metrics, guardrails and validation methods that make autonomous systems safe for regulated enterprises. Practical, case-driven talks for banks, tech teams and AI professionals.</p>
+        <h1>How do you trust AI that <span>acts on its own?</span></h1>
+        <p class="role"><b>AI Validation &amp; Risk Governance Leader</b> at a leading financial institution. Formerly VP, GenAI/ML Risk at BNY.</p>
+        <p class="lede">Most AI talks come from people who build or sell AI. Mine come from the other side of the table: I challenge AI models before major banks let them go live. Audiences get an honest view of what fails, why, and how to make AI trustworthy.</p>
         <div class="cta">
-          <a class="btn primary" href="#invite">Invite me to speak</a>
-          <a class="btn" href="#talks">Browse talks</a>
+          <a class="btn primary" href="#contact">Invite me to speak</a>
+          <a class="btn" href="#talks">See past talks</a>
         </div>
+        <p class="next"><i></i>Next: Secure AI Summit UAE, Dubai · 26 Nov 2026</p>
       </div>
-      <figure class="portrait" style="margin:0">
+      <figure class="portrait">
         <img src="data:image/jpeg;base64,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" alt="Portrait of Pranjal Mendhekar">
-        <figcaption class="badge"><span class="mono"><span class="dot"></span>Next on stage</span><b>Secure AI Summit UAE · 26 Nov 2026</b></figcaption>
       </figure>
     </div>
   </section>
 
-  <div class="trace" aria-label="What my talks cover">
+  <div class="proof" aria-label="At a glance">
     <div class="wrap">
-      <span class="label">The agent lifecycle I speak on</span>
-      <div class="steps">
-        <span class="step done"><i></i>Plan</span><span class="rail"></span>
-        <span class="step done"><i></i>Act</span><span class="rail"></span>
-        <span class="step done"><i></i>Evaluate trajectory</span><span class="rail"></span>
-        <span class="step done"><i></i>Guardrail</span><span class="rail"></span>
-        <span class="step"><i></i>Govern &amp; monitor</span>
-      </div>
+      <div><b>8+ years</b><span>in AI and model risk at major banks</span></div>
+      <div><b>10 sessions</b><span>since 2025, online and on stage</span></div>
+      <div><b>4 countries</b><span>audiences in India, UK, US and UAE</span></div>
+      <div><b>Keynote</b><span>and panel at Secure AI Summit UAE 2026</span></div>
     </div>
   </div>
 
-  <section class="block upcoming" id="upcoming">
+  <section class="sec" id="why">
     <div class="wrap">
-      <span class="label">Upcoming · In person</span>
-      <div class="up-grid">
-        <div class="up-event">
-          <h3>Secure AI Summit UAE 2026</h3>
-          <div class="up-meta">
-            <span>26 November 2026</span>
-            <span>Conrad Dubai, Sheikh Zayed Road</span>
-            <span>Knowledge partner: ISACA</span>
+      <div class="sec-label"><span class="label">Why invite me</span></div>
+      <div class="sec-body">
+        <h2>Talks your audience will actually use</h2>
+        <ul class="diff">
+          <li><h3>From the validator's seat</h3><p>My day job is finding where AI breaks before it reaches customers. Audiences hear real failure patterns, not polished demos.</p></li>
+          <li><h3>Frameworks, not hype</h3><p>Every session leaves people with something they can apply the next day: an evaluation rubric, a metric, a guardrail pattern.</p></li>
+          <li><h3>Pitched for the room</h3><p>Executives, risk teams, engineers or students. The same rigor, explained at the depth your audience needs.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="upcoming">
+    <div class="wrap">
+      <div class="sec-label"><span class="label">Next on stage</span></div>
+      <div class="sec-body">
+        <div class="event">
+          <div>
+            <h3>Secure AI Summit UAE 2026</h3>
+            <div class="meta">
+              <span>26 November 2026 · Conrad Dubai</span>
+              <span>Knowledge partner: ISACA</span>
+              <a href="https://secureaiuae.com/speakers/" target="_blank" rel="noopener">Speaker line-up ↗</a>
+            </div>
           </div>
-          <p style="margin-top:18px;opacity:.85;max-width:44ch">A summit for security executives, AI practitioners and regulators working on enterprise AI security in the UAE.</p>
-          <p style="margin-top:14px"><a class="link" href="https://secureaiuae.com/speakers/" target="_blank" rel="noopener">See the speaker line-up ↗</a></p>
-        </div>
-        <div class="sessions">
-          <div class="session">
-            <span class="kind">Keynote</span>
-            <h4>Topic to be announced</h4>
-          </div>
-          <div class="session">
-            <span class="kind">Panel discussion #3</span>
-            <h4>Operationalizing AI Governance Without Stifling Innovation</h4>
-            <ul>
-              <li>Tiering AI use cases by risk</li>
-              <li>Continuous monitoring for model drift</li>
-              <li>Clear ownership of AI model risk</li>
-              <li>Cross-functional AI safety boards</li>
-              <li>Adapting to evolving global regulation</li>
-            </ul>
+          <div class="sessions">
+            <div class="session"><span class="kind">Panel discussion</span><p>Operationalizing AI Governance Without Stifling Innovation</p></div>
+            <div class="session"><span class="kind">Keynote</span><p class="tba">Topic to be announced</p></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="topics">
+
+  <section class="sec" id="topics">
     <div class="wrap">
-      <div class="head">
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="label">Speaking topics</span><h2>Four tracks, one question: can we trust it?</h2></div>
-        <p>Every talk can be tailored for executives, practitioners or students, and for a webinar, panel or conference stage.</p>
-      </div>
-      <div class="tracks">
-        <article class="track flag">
-          <span class="code">EVAL · Signature track</span>
-          <h3>Agentic AI evaluation &amp; guardrails</h3>
-          <p>How to judge AI agents by their decisions and multi-step trajectories, not just their outputs. Rubrics, metrics and guardrails that keep agents reliable and controllable.</p>
-          <span class="count" data-count="eval"></span>
-        </article>
-        <article class="track">
-          <span class="code">GOV</span>
-          <h3>AI risk &amp; governance in financial services</h3>
-          <p>Model risk management for AI in banking: validation of black-box models, risk tiering, monitoring and governance that does not slow innovation down.</p>
-          <span class="count" data-count="gov"></span>
-        </article>
-        <article class="track">
-          <span class="code">ARCH</span>
-          <h3>GenAI architectures</h3>
-          <p>Advanced and multimodal RAG, multi-LLM systems, context protocols and reasoning-aware prompting, explained through enterprise case studies.</p>
-          <span class="count" data-count="arch"></span>
-        </article>
-        <article class="track">
-          <span class="code">CAREER</span>
-          <h3>AI careers</h3>
-          <p>What it takes to move into high-impact data and AI roles, and how to turn research and learning into real-world credibility.</p>
-          <span class="count" data-count="career"></span>
-        </article>
+      <div class="sec-label"><span class="label">Topics</span></div>
+      <div class="sec-body">
+        <h2>What I speak about</h2>
+        <ul class="topics">
+          <li><h3>Agentic AI evaluation &amp; guardrails</h3><p>Judging agents by their decisions and paths, not only their answers.</p></li>
+          <li><h3>AI risk &amp; governance in financial services</h3><p>Validating black-box models and governing AI without slowing innovation.</p></li>
+          <li><h3>GenAI architectures</h3><p>RAG, multi-LLM systems and reasoning-aware prompting, explained through cases.</p></li>
+          <li><h3>AI careers</h3><p>Moving into high-impact data and AI roles.</p></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="block" id="signature" style="padding-top:0">
+  <section class="sec" id="talks">
     <div class="wrap">
-      <div class="head">
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="label">Signature talk</span><h2>Designing the Agentic Evaluation Lifecycle</h2></div>
-        <p>Metrics, trajectories and guardrails for AI systems that behave differently on every run. Available as a keynote or a half-day workshop.</p>
+      <div class="sec-label"><span class="label">Talks</span><span class="muted" id="talk-count" style="font-size:.9rem"></span></div>
+      <div class="sec-body">
+        <h2>Past talks</h2>
+        <div class="talks" id="log"></div>
       </div>
-      <div class="spot">
-        <div>
-          <div class="stat">15,625</div>
-          <p class="stat-cap">possible tool-call sequences for a six-step task with five tools. A 200-case test suite covers just 1.3% of them. This is why agents need a different kind of evaluation.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div>
+        <h2>Planning a session on AI risk, governance or Agentic AI?</h2>
+        <p>Tell me about your event, audience and format, and I'll propose a talk built for your room.</p>
+      </div>
+      <a class="btn" href="#contact">Start a conversation</a>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-label"><span class="label">About</span></div>
+      <div class="sec-body">
+        <div class="bio">
+          <p>Pranjal Mendhekar is a UAE-based AI Validation &amp; Risk Governance Leader at a leading financial institution, and formerly Vice President, GenAI/ML Risk at BNY. He brings 8+ years of experience in data science, AI and model risk across major global banks.</p>
+          <p>His work sits where AI innovation meets accountability: validating models that can't be inspected from the inside, building evaluation frameworks for autonomous agents, and designing governance that lets teams ship AI safely.</p>
         </div>
-        <ol class="parts">
-          <li><span class="n">01</span><div><b>The paradigm shift</b><span class="d">Why static test sets and overlap scores stop working for agents.</span></div></li>
-          <li><span class="n">02</span><div><b>Trajectory and outcome</b><span class="d">Step-level metrics, sound versus looping paths, and a calibrated judge rubric.</span></div></li>
-          <li><span class="n">03</span><div><b>Structural guardrails</b><span class="d">Input, action and output checks, with risk tiers for agent actions.</span></div></li>
-          <li><span class="n">04</span><div><b>The feedback loop</b><span class="d">Turning failed runs into the next model's training data.</span></div></li>
-        </ol>
-        <div class="principles">
-          <p>Evaluate the distribution of runs, not the wording of one answer.</p>
-          <p>Score the path and the outcome separately. Fragile passes hide in between.</p>
-          <p>Enforce controls in code at the boundary, not in the prompt.</p>
-        </div>
+        <dl class="facts">
+          <div><dt>Education</dt><dd>MS, Machine Learning &amp; AI, Liverpool John Moores University<br>MS, Data Science &amp; Analytics, Northwestern University<br>PG Diploma, IIT Madras<br>BE, Computer Engineering, Savitribai Phule Pune University</dd></div>
+          <div><dt>Shared the stage with</dt><dd>Leaders from FIS, TCS, SS&amp;C, Tech Mahindra, du and ISACA UAE</dd></div>
+          <div><dt>Hosts</dt><dd>upGrad, Operartis, Secure AI Summit UAE</dd></div>
+          <div><dt>Audiences</dt><dd>India, UK, US and the UAE</dd></div>
+        </dl>
       </div>
-      <div><a class="btn primary" href="#invite">Book this talk</a></div>
     </div>
   </section>
 
-  <section class="block" id="talks" style="padding-top:0">
+  <section class="sec" id="contact">
     <div class="wrap">
-      <div class="head">
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="label">Talk archive</span><h2>Past talks</h2></div>
-        <div class="filters" role="group" aria-label="Filter talks by track">
-          <button class="chip" type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
-          <button class="chip" type="button" id="f-eval" data-f="eval" aria-pressed="false">Evaluation</button>
-          <button class="chip" type="button" id="f-gov" data-f="gov" aria-pressed="false">Governance</button>
-          <button class="chip" type="button" id="f-arch" data-f="arch" aria-pressed="false">Architectures</button>
-          <button class="chip" type="button" id="f-career" data-f="career" aria-pressed="false">Careers</button>
-        </div>
-      </div>
-      <div class="log" id="log"></div>
-    </div>
-  </section>
-
-  <section class="block" style="padding-top:0">
-    <div class="wrap" style="padding-block:0 72px">
-      <span class="label">Shared the stage with leaders from</span>
-      <div class="peers"><span>FIS</span><span>TCS</span><span>SS&amp;C</span><span>Tech Mahindra</span><span>Operartis</span><span>du</span><span>Abu Dhabi Commercial Bank</span><span>ISACA UAE</span><span>upGrad</span></div>
-    </div>
-  </section>
-
-  <section class="block" id="about" style="border-top:1px solid var(--line)">
-    <div class="wrap">
-      <div class="about">
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="label">About</span><h2>Risk practitioner first, speaker second.</h2></div>
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <div class="bio">
-            <p>Pranjal Mendhekar is a UAE-based AI Validation &amp; Risk Governance Leader at a leading financial institution, and formerly Vice President, GenAI/ML Risk at BNY.</p>
-            <p>He brings 7+ years across finance and consulting, including data science roles at NICE Actimize and Accenture before leading GenAI and ML risk work in global banking.</p>
-            <p>His work sits where AI innovation meets accountability: validating models that can't be inspected from the inside, building evaluation frameworks for autonomous agents, and designing governance that lets teams ship AI safely.</p>
-            <p>He has delivered a recurring talk series with upGrad, joined an international industry panel on AI model risk with leaders from FIS, TCS and SS&amp;C, and speaks at Secure AI Summit UAE 2026 in Dubai.</p>
-          </div>
-          <dl class="facts" style="margin:0">
-            <div class="fact"><dt>Focus</dt><dd>Agentic AI evaluation, AI model risk, GenAI governance</dd></div>
-            <div class="fact"><dt>Education</dt><dd>MSc AI &amp; Machine Learning, Liverpool John Moores University · MS Analytics &amp; Data Science, Northwestern University · Advanced PG Diploma, Big Data &amp; Cloud, IIT Madras · Bachelor's in Computers, Pune University</dd></div>
-            <div class="fact"><dt>Audiences</dt><dd>India, UK, US and the UAE</dd></div>
-            <div class="fact"><dt>Hosts</dt><dd>upGrad, Operartis, Secure AI Summit UAE</dd></div>
-            <div class="fact"><dt>Based in</dt><dd>United Arab Emirates</dd></div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block invite" id="invite">
-    <div class="wrap">
-      <div class="head">
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="label">Work with me</span><h2>Invite me to speak</h2></div>
-        <p>Available for conferences, corporate sessions and academic programs, in person in the UAE or online worldwide.</p>
-      </div>
-      <div class="formats">
-        <div class="format"><span class="len">20–45 min</span><h3>Keynote</h3><p>A focused talk on trusting and governing Agentic AI, tailored to your audience.</p></div>
-        <div class="format"><span class="len">45–60 min</span><h3>Panel</h3><p>Practitioner perspective on AI risk, validation and governance in regulated industries.</p></div>
-        <div class="format"><span class="len">Half day</span><h3>Workshop</h3><p>Hands-on session on building evaluation rubrics and guardrails for AI agents.</p></div>
-        <div class="format"><span class="len">60–90 min</span><h3>Webinar</h3><p>Online sessions for learning platforms, alumni networks and professional communities.</p></div>
-      </div>
-      <div class="contact">
-        <div style="display:flex;flex-direction:column;gap:6px"><h3>Let's talk about your event</h3><p style="color:var(--muted)">Share the date, audience and format, and I'll reply with a session proposal.</p></div>
-        <div class="row">
+      <div class="sec-label"><span class="label">Contact</span></div>
+      <div class="sec-body">
+        <h2>Invite me to speak</h2>
+        <p class="intro">For conferences, corporate sessions and academic programs, in person in the UAE or online. Share the date, audience and format, and I'll reply with a session proposal.</p>
+        <div class="formats"><span>Keynote</span><span>Panel</span><span>Workshop</span><span>Webinar</span></div>
+        <div class="contact">
           <span class="addr" id="addr">pranjalmspeaks@gmail.com</span>
           <button class="btn sm" type="button" id="copy">Copy email</button>
-          <a class="btn sm" href="mailto:pranjalmspeaks@gmail.com?subject=Speaking%20invitation">Email me</a>
           <a class="btn sm primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
@@ -406,45 +310,38 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Pranjal Mendhekar</span><span class="mono">Views expressed in talks are my own.</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Pranjal Mendhekar</span><span>Views expressed in talks are my own.</span></div></footer>
 
 <script>
-// Add recording links by filling in `url` for each talk.
+// Add a recording link by filling in `url` for a talk.
 const talks = [
-  {d:"2026-09-12", k:["Score the agent's path and its outcome as separate signals", 'Evaluate many runs, because one run hides drift', 'Place guardrails in code at the input, action and output points'], t:"Designing the Agentic AI Evaluation Lifecycle: Metrics, Trajectories & Guardrails", h:"upGrad Alum Afterclass", f:"Webinar", tr:"eval", s:"How agent evaluation differs from traditional AI, which metrics matter for reliability, and how guardrails and trajectory checks control agent behaviour.", url:""},
-  {d:"2026-05-23", k:['Why no single number proves a model is good', 'When to use overlap metrics, LLM-as-judge and benchmarks', 'Decomposed metrics for RAG, agents and code, calibrated against human raters'], t:"The Grading Rubric: How to Judge AI When You Can't See Inside", h:"upGrad Alum Afterclass", f:"Webinar", tr:"eval", s:"A practical rubric for judging black-box AI on its outputs, consistency and real-world impact, without needing to read the code.", url:""},
-  {d:"2026-03-21", k:['How AI moves from reactive assistant to agents that plan, act and learn', 'The goal, plan, execute, monitor, improve loop, shown on a financial audit', 'Why people shift from doing the work to supervising it'], t:"How Agentic AI Is Shaping the Next Phase of AI Innovation", h:"upGrad", f:"Webinar", tr:"eval", s:"What agentic AI means in plain terms, how AI moves from tools to autonomous systems, and how businesses are starting to use agents.", url:""},
-  {d:"2026-01-10", k:['Reliability comes from process design, not prompt wording', 'A planner, reasoner and verifier pipeline for trustworthy answers', 'Case study on document extraction in banking'], t:"The Strategic Role of Reasoning-Aware Prompts in Agentic AI", h:"upGrad Alum Afterclass", f:"Webinar", tr:"arch", s:"Why prompt design shapes how well an agent reasons, plans and decides, with enterprise lessons on building safer agents.", url:""},
-  {d:"2025-12-04", t:"AI Model Risk Management in Financial Reconciliation: Challenges & Progress", h:"Operartis", f:"Industry panel", tr:"gov", s:"International panel with practitioners from FIS, TCS, SS&C, Tech Mahindra and Operartis on managing AI model risk in reconciliation.", url:""},
-  {d:"2025-11-08", k:['How multimodal RAG works across text, images, audio and video', 'Hybrid search, query rewriting and re-ranking', 'A phased path from text RAG to multimodal systems'], t:"How Multimodal and Advanced RAG Are Changing the Future of AI", h:"upGrad", f:"Webinar", tr:"arch", s:"How multimodal and advanced retrieval combine text, data and context to solve harder problems and support better decisions.", url:""},
-  {d:"2025-09-20", k:['The AI trends shaping 2025: agentic, multimodal and responsible AI', 'Which roles and skills employers actually look for', 'Why business acumen matters as much as technical depth'], t:"The Untold Trends Empowering Careers to Reach High-Impact Data & AI Roles", h:"upGrad · with Dr. Sayed Irfan", f:"Joint session", tr:"career", s:"Hiring trends in data and AI, and the technical and strategic skills that keep professionals competitive.", url:""},
-  {d:"2025-08-30", k:['Closing the gaps in perspective, presence and network', 'Turning a research thesis into business impact', 'The skill stack of an AI leader'], t:"Beyond the Thesis: How LJMU Immersion Redefines AI Career Growth", h:"upGrad", f:"Webinar", tr:"career", s:"Turning academic research into real-world AI applications while building global exposure and credibility.", url:""},
-  {d:"2025-07-26", k:['What Model Context Protocol solves for multi-model systems', 'Sequential and parallel multi-LLM pipelines', 'Single versus multi-LLM trade-offs, with real use cases'], t:"Contextual Intelligence and Multi-LLMs for Advancing AI Careers", h:"upGrad", f:"Webinar", tr:"arch", s:"How context protocols and coordinated multi-LLM architectures turn static models into enterprise-ready systems, with case studies.", url:""}
+  {d:"2026-09-12", t:"Designing the Agentic AI Evaluation Lifecycle: Metrics, Trajectories & Guardrails", h:"upGrad Alum Afterclass · Webinar", s:"How agent evaluation differs from traditional AI, and how metrics, trajectory checks and guardrails keep agents reliable.", k:["Score the agent's path and its outcome as separate signals","Evaluate many runs, because one run hides drift","Place guardrails in code at the input, action and output points"], url:""},
+  {d:"2026-05-23", t:"The Grading Rubric: How to Judge AI When You Can't See Inside", h:"upGrad Alum Afterclass · Webinar", s:"A practical way to judge black-box AI on its outputs, consistency and real-world impact.", k:["Why no single number proves a model is good","When to use overlap metrics, LLM-as-judge and benchmarks","Decomposed metrics for RAG, agents and code"], url:""},
+  {d:"2026-03-21", t:"How Agentic AI Is Shaping the Next Phase of AI Innovation", h:"upGrad · Webinar", s:"What agentic AI means in plain terms, and how businesses are starting to use agents.", k:["From reactive assistants to agents that plan, act and learn","The goal, plan, execute, monitor, improve loop","Why people shift from doing the work to supervising it"], url:""},
+  {d:"2026-01-10", t:"The Strategic Role of Reasoning-Aware Prompts in Agentic AI", h:"upGrad Alum Afterclass · Webinar", s:"Why process design shapes how well an agent reasons, plans and decides.", k:["Reliability comes from process design, not prompt wording","A planner, reasoner and verifier pipeline","Case study on document extraction in banking"], url:""},
+  {d:"2025-12-04", t:"AI Model Risk Management in Financial Reconciliation: Challenges & Progress", h:"Operartis · Industry panel", s:"International panel with practitioners from FIS, TCS, SS&C, Tech Mahindra and Operartis.", k:["Why validating AI matching models can take weeks","Controlling data quality before it reaches the model","Assessing how model outputs are used downstream"], url:"https://www.operartis.com/ai-model-risk-management-reconciliation"},
+  {d:"2025-11-08", t:"How Multimodal and Advanced RAG Are Changing the Future of AI", h:"upGrad · Webinar", s:"How multimodal and advanced retrieval combine text, data and context to solve harder problems.", k:["How multimodal RAG works across text, images, audio and video","Hybrid search, query rewriting and re-ranking","A phased path from text RAG to multimodal systems"], url:""},
+  {d:"2025-09-20", t:"The Untold Trends Empowering Careers to Reach High-Impact Data & AI Roles", h:"upGrad · Joint session with Dr. Sayed Irfan", s:"Hiring trends in data and AI, and the skills that keep professionals competitive.", k:[], url:""},
+  {d:"2025-08-30", t:"Beyond the Thesis: How LJMU Immersion Redefines AI Career Growth", h:"upGrad · Webinar", s:"Turning academic research into real-world AI applications and professional credibility.", k:[], url:""},
+  {d:"2025-07-26", t:"Contextual Intelligence and Multi-LLMs for Advancing AI Careers", h:"upGrad · Webinar", s:"How context protocols and multi-LLM architectures turn static models into enterprise-ready systems.", k:["What Model Context Protocol solves","Sequential and parallel multi-LLM pipelines","Single versus multi-LLM trade-offs"], url:""}
 ];
 const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const fmt=d=>{const [y,m,dd]=d.split("-");return `${dd} ${months[+m-1]} ${y}`};
+const fmt=d=>{const [y,m,dd]=d.split("-");return `${months[+m-1]} ${y}`};
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
-const log=document.getElementById("log");
-log.innerHTML=talks.map(k=>`
-  <article class="entry" data-tr="${k.tr}">
-    <time datetime="${k.d}">${fmt(k.d)}</time>
-    <div><h3>${esc(k.t)}</h3><p class="sum">${esc(k.s)}</p>${k.k?`<ul class="kp">${k.k.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</div>
-    <div class="meta"><span>${esc(k.h)}</span><span class="tag ${k.f==="Industry panel"?"panel":""}">${esc(k.f)}</span></div>
-    ${k.url?`<a class="watch" href="${k.url}" target="_blank" rel="noopener">Watch ↗</a>`:`<span class="watch" title="Recording link coming soon">Recording soon</span>`}
-  </article>`).join("");
-document.querySelectorAll("[data-count]").forEach(el=>{
-  const n=talks.filter(k=>k.tr===el.dataset.count).length;
-  el.textContent = n ? `${n} past talk${n>1?"s":""}` : "";
-});
-document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
-  const f=b.dataset.f;
-  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));
-  log.querySelectorAll(".entry").forEach(e=>{e.hidden = f!=="all" && e.dataset.tr!==f});
-}));
+document.getElementById("log").innerHTML=talks.map(k=>`
+  <details class="talk">
+    <summary><time datetime="${k.d}">${fmt(k.d)}</time><span class="t">${esc(k.t)}<span class="h">${esc(k.h)}</span></span><span class="plus" aria-hidden="true">+</span></summary>
+    <div class="more">
+      <p>${esc(k.s)}</p>
+      ${k.k.length?`<ul>${k.k.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+      ${k.url?`<a href="${k.url}" target="_blank" rel="noopener">Watch the recording ↗</a>`:""}
+    </div>
+  </details>`).join("");
+document.getElementById("talk-count").textContent=`${talks.length} sessions since 2025`;
 document.getElementById("copy").addEventListener("click",async e=>{
-  const t=document.getElementById("addr").textContent;
-  try{await navigator.clipboard.writeText(t);e.target.textContent="Copied"}
-  catch{const r=document.createRange();r.selectNodeContents(document.getElementById("addr"));const s=getSelection();s.removeAllRanges();s.addRange(r);e.target.textContent="Selected"}
+  const el=document.getElementById("addr");
+  try{await navigator.clipboard.writeText(el.textContent);e.target.textContent="Copied"}
+  catch{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);e.target.textContent="Selected"}
   setTimeout(()=>e.target.textContent="Copy email",1800);
 });
 </script>
